@@ -10,6 +10,12 @@ app.get('/sum', (req, res) => {
     const c = inputA + inputB;
     const finalResponse = `The sum of ${inputA} and ${inputB} is ${c}.`;
 
+    if (Number.isNaN(inputA) || Number.isNaN(inputB)){
+        return res
+        .status(400)
+        .send('use numbers dumpass')
+    }
+
     res
     .status(200)
     .send(finalResponse);
@@ -26,7 +32,7 @@ app.get('/cipher', (req, res) => {
     if (Number.isNaN(inputShift)){
         return res
         .status(400)
-        .send('fuck off with that NaN shit');
+        .send('use a real number for shift, dumpass');
     }
 
     res

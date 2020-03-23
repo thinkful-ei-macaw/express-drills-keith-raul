@@ -4,9 +4,7 @@
   "description": "",
   "main": "drill.js",
   "scripts": {
-    "start": "node drill.js",
-    "a": "1",
-    "b": "2"
+    "start": "node drill.js"
   },
   "author": "",
   "license": "ISC",
